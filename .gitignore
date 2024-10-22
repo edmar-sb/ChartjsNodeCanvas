@@ -107,4 +107,7 @@ typings/
 !/reports/index.html
 
 #dist
-dist/**
+# dist/**
+dist/example*
+dist/index.spec*
+dist/index.e2e*
