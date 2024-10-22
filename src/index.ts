@@ -1,5 +1,5 @@
 import { Readable } from 'stream';
-import { Chart as ChartJS, ChartConfiguration, ChartComponentLike } from 'chart.js';
+import { Chart as ChartJS, ChartConfiguration, ChartComponentLike, ChartItem } from 'chart.js';
 import { createCanvas, registerFont, Image } from 'canvas';
 import { freshRequire } from './freshRequire';
 import { BackgroundColourPlugin } from './backgroundColourPlugin';
@@ -287,7 +287,7 @@ export class ChartJSNodeCanvas {
 		const context = canvas.getContext('2d') as any;
 		const ctx = canvas.getContext("2d");
 		(global as any).Image = this._image; // Some plugins use this API
-		const chart = new Chart(ctx as unknown as ChartItem, configuration);
+		const chart = new ChartJS(ctx as unknown as ChartItem, configuration);
 		delete (global as any).Image;
 		return chart;
 	}

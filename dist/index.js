@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ChartJSNodeCanvas = void 0;
+const chart_js_1 = require("chart.js");
 const freshRequire_1 = require("./freshRequire");
 const backgroundColourPlugin_1 = require("./backgroundColourPlugin");
 class ChartJSNodeCanvas {
@@ -192,8 +193,9 @@ class ChartJSNodeCanvas {
         configuration.options.responsive = false;
         configuration.options.animation = false;
         const context = canvas.getContext('2d');
+        const ctx = canvas.getContext("2d");
         global.Image = this._image; // Some plugins use this API
-        const chart = new this._chartJs(context, configuration);
+        const chart = new chart_js_1.Chart(ctx, configuration);
         delete global.Image;
         return chart;
     }
