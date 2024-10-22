@@ -35,7 +35,7 @@
   "readme": "README.md",
   "license": "MIT",
   "dependencies": {
-    "canvas": "https://github.com/edmar-sb/node-canvas.git#chore/v2.11.2 "
+    "canvas": "https://github.com/edmar-sb/node-canvas.git#chore/v2.11.2",
     "tslib": "^2.3.1"
   },
   "peerDependencies": {
