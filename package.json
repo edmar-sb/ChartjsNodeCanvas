@@ -35,7 +35,7 @@
   "readme": "README.md",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.11.2",
+    "canvas": "https://github.com/Automattic/node-canvas.git#130785fa1db9464e558755ff2a3bf60606ec7b8a",
     "tslib": "^2.3.1"
   },
   "peerDependencies": {
